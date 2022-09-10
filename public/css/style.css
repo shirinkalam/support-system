@@ -1,0 +1,292 @@
+@font-face {
+    font-family: yekanbakh;
+    src: url('../fonts/yekanbakh/heavy.ttf');
+  }
+
+
+* {
+	margin: 0;
+	padding: 0;
+    font-family: yekanbakh;
+
+}
+
+body {
+	background: #fff;
+  font-family: Lato,sans-serif;
+  font-size:15px;
+	overflow-x:hidden;
+}
+
+.offset-sm-3{
+    width: 100%;
+    background-color: rgb(212, 101, 101);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+form{
+    position: relative;
+}
+
+.alert-success{
+    width: 100%;
+    background-color: rgb(121, 238, 156);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.alert-danger{
+    width: 100%;
+    background-color: rgb(212, 101, 101);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#menu {
+	background: #384047;
+	height: 60px;
+	padding: 0 5px 0;
+	text-align: center;
+}
+.navbar-header{
+	 position: relative;
+	 display: none;
+
+}
+.navbar-toggle{
+	 float: right;
+	  padding: 9px 10px;
+	  margin-top: 8px;
+	  margin-right: 15px;
+	  margin-bottom: 8px;
+	  background-color: transparent;
+	  background-image: none;
+	  border: 1px solid transparent;
+	  border-radius: 4px;
+	  cursor:pointer;
+	  /*display: none;*/
+}
+#navbar{
+	display: block;
+}
+
+.navbar-toggle:focus {
+  outline: 0;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background: #fff;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+ul {
+	list-style: none;
+}
+
+ul li {
+	display: inline;
+	width: 90px;
+    margin: 30px;
+	text-align: center;
+}
+
+ul li a {
+	color: #fff;
+	width: 100%;
+	line-height: 60px;
+	text-decoration: none;
+    font-size: 13px;
+}
+
+ul li.active {
+	background: #fff;
+}
+
+ul li.active a {
+	color: #384047;
+}
+
+select {
+	width: 94%;
+	margin: 11px  0 11px 2%;
+	float: left;
+}
+
+h1 {
+	margin: 40px 0 10px;
+	text-align: center;
+	color: #384047;
+}
+p {
+	text-align: center;
+	color: #777;
+}
+
+.google-btn{
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    background-color: #b1b1b1;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 50%;
+    border: 1px solid #5a5a5a;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 100px;
+    text-decoration: none;
+}
+.magic-btN{
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    background-color: #b1b1b1;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 45%;
+    border: 1px solid #5a5a5a;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-top: 11px ;
+    text-decoration: none;
+    position: absolute;
+    left: 20px;
+}
+
+.user-name{
+    color: #6ee993;
+}
+
+.logout-btn{
+    color:rgb(207, 64, 64) ;
+}
+
+.container-two-factor{
+    width:40%;
+    background-color: #dddbdb;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.active-btn{
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 20%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin: 10px;
+}
+
+.confirm-btn{
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.not-give-dode{
+    text-decoration: none;
+    color:rgb(150, 46, 46) ;
+}
+
+h2{
+    color: rgb(17, 170, 63);
+}
+/** Start Coding Here **/
+
+/**
+Modify CSS to hide links on small width and show button and select
+Also hides select and button on larger width and show's links
+**/
+
+@media only screen and (max-width: 767px) {
+
+	.navbar-header{
+		display: block;
+	}
+	.navbar-header:after{
+		content:"";
+		display: table;
+		clear:both;
+	}
+	a,p{
+	line-height: initial;
+
+	}
+	#navbar{
+		width:100%;
+		background:#000;
+		position: relative;
+		top: 12px;
+	    left: -7px;
+	    display: none;
+	}
+	#menu {
+			width:100%;
+			display: block;
+			font-size:1.25em;
+			text-align: center;
+		}
+	/*	#navbar.js {
+			display: none;
+		}*/
+		ul {
+			width:100%;
+			list-style:none;
+		}
+		ul:after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		li {
+			width:100%;
+			border-right:none;
+		}
+
+		#menu .nav li {
+		    display:block;
+		    width:100%;
+		    float:none;
+		    padding: 10px;
+		    border-radius: 0px;
+		    border-bottom: 1px solid #eee;
+
+		  }
+		ul li a {
+			line-height: 20px;
+		}
+
+	}
