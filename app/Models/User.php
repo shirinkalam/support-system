@@ -65,4 +65,9 @@ class User extends Authenticatable
     {
         SendEmail::dispatch($this,new ResetPassword($this,$token));
     }
+
+    public function  tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
 }

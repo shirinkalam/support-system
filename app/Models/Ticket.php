@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Ticket extends Model
 {
     use HasFactory;
+
+    protected $fillable =[
+        'title','text','department','file_path','periority'
+    ];
+
+    protected $attributes =[
+        'status' => 0
+    ];
 }
