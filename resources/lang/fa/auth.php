@@ -61,5 +61,6 @@ return [
     'activate'=>'فعال سازی',
     'deactivate' =>'غیر فعال سازی',
     'twoFactorDeactivated'=>'احراز هویت دو عاملی غیر فعال شد',
-    'codeResent'=>'کد احراز هویت دوباره ارسال شد'
+    'codeResent'=>'کد احراز هویت دوباره ارسال شد',
+    'role'=>'بخش',
 ];

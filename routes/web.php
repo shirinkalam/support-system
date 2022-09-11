@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\ForgetPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\MagicController;
@@ -50,4 +51,11 @@ Route::prefix('auth')->namespace('Auth')->group(function () {
     Route::get('login/code',[LoginController::class,'showCodeForm'])->name('auth.login.code.form');
     Route::post('login/code',[LoginController::class,'confirmCode'])->name('auth.login.code');
     Route::get('two-factor/resent',[TwoFactorController::class,'resent'])->name('auth.two.factor.resent');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::get('register',[AdminController::class,'showRegistrationForm'])->name('admin.register.form');
+    Route::post('register',[AdminController::class,'register'])->name('admin.register');
+    Route::get('login',[AdminController::class,'showLoginForm'])->name('admin.login.form');
+    Route::post('login',[AdminController::class,'login'])->name('admin.login');
 });

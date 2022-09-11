@@ -19,6 +19,8 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable ,MagicallyAthenticable,HasTwoFactor;
 
+    protected $quard = 'web';
+
     /**
      * The attributes that are mass assignable.
      *
