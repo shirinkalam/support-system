@@ -25,6 +25,13 @@ class TicketController extends Controller
         return back();
     }
 
+    public function index()
+    {
+        $tickets = auth()->user()->tickets;
+
+        return view('tickets.tickets',compact('tickets'));
+    }
+
     private function uploadFile(Request $request)
     {
         return $request->hasFile('file')

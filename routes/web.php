@@ -63,3 +63,4 @@ Route::prefix('admin')->group(function () {
 
 Route::get('tickets/new',[TicketController::class,'new'])->name('ticket.new');
 Route::post('tickets',[TicketController::class,'create'])->name('ticket.create');
+Route::get('tickets',[TicketController::class,'index'])->name('ticket.index');

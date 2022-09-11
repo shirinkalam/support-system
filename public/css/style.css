@@ -289,4 +289,220 @@ Also hides select and button on larger width and show's links
 			line-height: 20px;
 		}
 
-	}
+}
+body {
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .table-data td img {
+    height: 90px;
+    width: auto;
+    border-radius: 0;
+    object-fit: contain;
+  }
+
+  .table-users .header {
+    background-color: #65bce7;
+    color: white;
+    font-size: 1.5em;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .table-users table tr:first-child {
+    font-size: 1.1em;
+  }
+
+  .table-users img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .table-users th,
+  .table-users td,
+  .table-users tr,
+  .table-users table {
+    font-weight: bold !important;
+  }
+
+  .table-users {
+    border: 1px solid #327a81;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 2em);
+    margin: 1em auto;
+    overflow: hidden;
+    width: 900px;
+  }
+
+  .table-users table {
+    width: 100%;
+  }
+
+  .table-users table td,
+  .table-users table th {
+    color: #101010;
+    padding: 10px;
+  }
+
+  .table-users table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .table-users table th {
+    background-color: #daeff1;
+  }
+
+  .table-users table tr:nth-child(2n) {
+    background-color: white;
+  }
+
+  .table-users table tr:nth-child(2n + 1) {
+    background-color: #edf7f8;
+  }
+
+  /* set table header to a fixed position. WinIE 6.x only                                       */
+
+  /* In WinIE 6.x, any element with a position property set to relative and is a child of       */
+
+  /* an element that has an overflow property set, the relative value translates into fixed.    */
+
+  /* Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
+
+  thead.fixedHeader tr {
+    position: relative;
+  }
+
+  /* set THEAD element to have block level attributes. All other non-IE browsers            */
+
+  /* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+
+  html > body thead.fixedHeader {
+    display: block;
+  }
+
+  /* define the table content to be scrollable                                              */
+
+  /* set TBODY element to have block level attributes. All other non-IE browsers            */
+
+  /* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+
+  /* induced side effect is that child TDs no longer accept width: auto                     */
+
+  html > body tbody {
+    display: block;
+    height: 60vh;
+    overflow: auto;
+    width: 100%;
+  }
+
+  @media (min-width: 769px) {
+    .table-users td,
+    .table-users table th {
+      width: 128.57px !important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .table-users table,
+    .table-users tr,
+    .table-users td {
+      display: block;
+    }
+
+    .table-users td:not(:first-child):before {
+      color: #000;
+      content: "";
+      display: block;
+      left: 0;
+      position: absolute;
+      font-weight: bolder;
+    }
+    .table-users td:nth-child(3):before {
+      content: "# of printed units in one batch:";
+    }
+    .table-users td:nth-child(4):before {
+      content: "PCB height in mm:";
+    }
+    .table-users td:nth-child(5):before {
+      content: "# of layers:";
+    }
+    .table-users td:nth-child(6):before {
+      content: "PCB Size in mm:";
+    }
+    .table-users td:nth-child(7):before {
+      content: "Time:";
+    }
+    .table-users tr {
+      padding: 10px 0;
+      position: relative;
+    }
+    .table-users thead th {
+      font-size: 14px;
+      padding: 2px;
+    }
+    html > body tbody {
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    thead.fixedHeader tr {
+      position: relative;
+      display: none;
+    }
+    .table-users .header {
+      color: #fff;
+      font-size: 2em;
+      font-weight: 700;
+      padding: 0;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+    .table-users img {
+      border: 3px solid;
+      border-color: #daeff1;
+      height: 100px;
+      margin: 0.5rem 0;
+      width: 100px;
+    }
+    .table-users td:first-child {
+      background-color: #c8e7ea;
+      border-bottom: 1px solid #91ced4;
+      border-radius: 10px 10px 0 0;
+      position: relative;
+      top: 0;
+      transform: translateY(0);
+      width: 100%;
+    }
+    .table-users td:not(:first-child) {
+      margin: 0;
+      padding: 5px 1em;
+      width: 100%;
+    }
+    .table-users td:not(:first-child):before {
+      font-size: 0.8em;
+      padding-top: 0.3em;
+      position: relative;
+    }
+    .table-users td:last-child {
+      padding-bottom: 1rem;
+    }
+    .table-users tr {
+      background-color: white;
+      border: 1px solid #6cbec6;
+      border-radius: 10px;
+      box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+      margin: 0.5rem 0;
+      padding: 0;
+    }
+    .table-users {
+      border: none;
+      box-shadow: none;
+      overflow: visible;
+    }
+  }

@@ -16,4 +16,10 @@ class Ticket extends Model
     protected $attributes =[
         'status' => 0
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }

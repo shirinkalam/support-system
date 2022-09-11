@@ -1,0 +1,91 @@
+@font-face {
+    font-family: vazir;
+    src: url(../fonts/Vazir.ttf);
+}
+body{
+    font-family: vazir;
+}
+nav{
+    height: 70px;
+    background-color: #5f70d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.con1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.con1 span i{
+    font-size: 20px;
+}
+.con1 span i:hover{
+    color: white;
+    transform: scale(0.9);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.con1 h1{
+    color: white;
+}
+.shirin{
+    color: #5d6cce;
+}
+.shirin:hover{
+    color: white;
+    transform: scale(0.2);
+    transition: all 0.6s;
+    cursor: pointer;
+
+
+}
+.box{
+    background-color: #1ab849 ;
+    color: white;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+.box h4{
+    margin-right: 10px;
+}
+.box p{
+    margin-right: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: black;
+}
+.box p span{
+    color: black;
+    font-weight: bold;
+}
+.box h3{
+    padding: 10px;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(155, 155, 158);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    width: 50%;
+
+}
+.box h3:hover{
+    background-color: white;
+    color:#4bc970 ;
+    transform: scale(0.9);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.bor{
+    border-radius: 10px;
+}

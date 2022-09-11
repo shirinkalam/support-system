@@ -11,11 +11,11 @@
 <body>
     @include('partials.navbar')
 
-    @if(session('mustVerifyEmail'))
+    {{-- @if(session('mustVerifyEmail'))
         <div class="alert alert-danger">
             @lang('auth.you must verify your email',['link'=>route('auth.email.send.verification')])
         </div>
-    @endif
+    @endif --}}
 
     @if (session('verifationEmailSent'))
     <div class="alert alert-success">
