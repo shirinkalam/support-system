@@ -19,7 +19,7 @@
       <tbody>
         @foreach ($tickets as $ticket)
         <tr>
-            <td>{{$ticket->title}}</td>
+            <td><a href="{{route('ticket.show',$ticket)}}">{{$ticket->title}}</a></td>
             <td>{{$ticket->user->name}}</td>
             <td>{{$ticket->periority}}</td>
             <td>{{$ticket->status}}</td>

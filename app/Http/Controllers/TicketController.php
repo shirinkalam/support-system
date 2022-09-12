@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ticket;
 use Illuminate\Http\Request;
 
 class TicketController extends Controller
@@ -30,6 +31,11 @@ class TicketController extends Controller
         $tickets = auth()->user()->tickets;
 
         return view('tickets.tickets',compact('tickets'));
+    }
+
+    public function show(Ticket $ticket)
+    {
+        return view('tickets.ticket',compact('ticket'));
     }
 
     private function uploadFile(Request $request)

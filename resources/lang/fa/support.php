@@ -8,4 +8,6 @@ return [
     'attachment' => 'پیوست',
     'new' => 'درخواست جدید',
     'submit'=>'ثبت',
+    'your text' => 'متن شما',
+    'sent' =>'ارسال'
 ];
