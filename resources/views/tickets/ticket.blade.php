@@ -9,7 +9,7 @@
 @section('content')
 
 <body>
-  <form actio="" method="POST" enctype="multipart/form-data">
+  <form action="{{route('reply.create',$ticket)}}" method="POST" enctype="multipart/form-data">
     @csrf
     <fieldset>
         <h3>{{$ticket->title}}</h3>
@@ -34,7 +34,7 @@
                 {{$reply->text}}
             </p>
             <p>
-                {{$reply->created_at}} توسط {{$reply->replible->name}}
+                {{$reply->created_at}} توسط {{$reply->repliable->name}}
             </p>
         </div>
         @endforeach

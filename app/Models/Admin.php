@@ -32,7 +32,7 @@ class Admin extends Authenticatable
 
     public function replies()
     {
-        return $this->morphMany(Reply::class,'replible');
+        return $this->morphMany(Reply::class,'repliable');
     }
 
 }
