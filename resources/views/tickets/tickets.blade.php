@@ -22,7 +22,7 @@
             <td><a href="{{route('ticket.show',$ticket)}}">{{$ticket->title}}</a></td>
             <td>{{$ticket->user->name}}</td>
             <td>{{$ticket->periority}}</td>
-            <td>{{$ticket->status}}</td>
+            <td>{{$ticket->statusName}}</td>
             <td>{{$ticket->created_at}}</td>
           </tr>
         @endforeach

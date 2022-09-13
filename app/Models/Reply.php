@@ -23,4 +23,9 @@ class Reply extends Model
 
         return $time->formatDifference($time);
     }
+
+    public function ticket()
+    {
+        return $this->belongsTo(Ticket::class);
+    }
 }

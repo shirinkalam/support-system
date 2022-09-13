@@ -35,4 +35,9 @@ class Admin extends Authenticatable
         return $this->morphMany(Reply::class,'repliable');
     }
 
+    public function isAdmin()
+    {
+        return $this instanceof Admin;
+    }
+
 }

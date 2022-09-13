@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Events\ReplyCreated;
 use App\Events\UserRegistered;
+use App\Listeners\ChangeTicketStatus;
 use App\Listeners\SendVerificationEmail;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -17,8 +19,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array<class-string, array<int, class-string>>
      */
     protected $listen = [
-        UserRegistered::class=>[
-            SendVerificationEmail::class
+        ReplyCreated::class =>[
+            ChangeTicketStatus::class
         ]
     ];
 
