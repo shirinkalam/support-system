@@ -13,6 +13,13 @@
     @csrf
     <fieldset>
         <h3>{{$ticket->title}}</h3>
+
+        @if ($ticket->isClosed())
+        <span>بسته شده</span>
+        @else
+        <a href="{{route('ticket.close',$ticket)}}">بستن</a>
+        @endif
+
         <div>
             <p>
                 {{$ticket->text}}
@@ -39,9 +46,11 @@
         </div>
         @endforeach
 
+        @if (!$ticket->isClosed())
         <div>
-        <input type="text" id="password" name="text" placeholder="@lang('support.your text')">
+            <input type="text" id="password" name="text" placeholder="@lang('support.your text')">
         </div>
+        @endif
     </fieldset>
 
     <div class="">

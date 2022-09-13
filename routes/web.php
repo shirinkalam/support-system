@@ -67,3 +67,5 @@ Route::post('tickets',[TicketController::class,'create'])->name('ticket.create')
 Route::get('tickets',[TicketController::class,'index'])->name('ticket.index');
 Route::get('tickets/{ticket}',[TicketController::class,'show'])->name('ticket.show');
 Route::post('tickets/{ticket}/reply',[ReplyController::class,'create'])->name('reply.create');
+
+Route::get('tickets/{ticket}/close',[TicketController::class,'close'])->name('ticket.close');

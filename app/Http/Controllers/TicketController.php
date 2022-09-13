@@ -44,4 +44,11 @@ class TicketController extends Controller
             ? $request->file->store('public')
             : null;
     }
+
+    public function close(Ticket $ticket)
+    {
+        $ticket->close();
+
+        return back();
+    }
 }
